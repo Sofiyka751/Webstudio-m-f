@@ -1,0 +1,70 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.main {
+  margin: 0 0 94px 0;
+}
+
+.main__content {
+  height: 500px;
+  background-image: url(../photo/first_back.png);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+.main__title-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__title {
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 42px;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+  width: 402px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__buton {
+  background-color: #087df9;
+  -webkit-text-fill-color: rgb(253, 253, 253);
+  margin: auto;
+  padding: 10px 32px;
+  top: 440px;
+  left: 724px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  display: block;
+  border: none;
+  &:hover {
+    animation: gradienSlide 3s both;
+  }
+}
+
+@keyframes gradienSlide {
+  25% {
+    background-color: #087df9;
+  }
+  50% {
+    background-color: #056fe0;
+  }
+  75% {
+    background-color: #025cbd;
+  }
+  100% {
+    background-color: #044f9e;
+  }
+}

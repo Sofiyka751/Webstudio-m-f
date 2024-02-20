@@ -1,0 +1,139 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+
+.header__nav {
+  @include flex-just-align(flex, center, space-around);
+  padding: 32px 0;
+  gap: 70px;
+}
+
+.nav {
+  @include flex-just-align(flex, center, space-around);
+  gap: 40px;
+}
+
+.item_i {
+  @include flex-just-align(flex, center, space-around);
+  text-decoration: none;
+  color: black;
+}
+
+.nav__list {
+  @include flex-just-align(flex, center, space-around);
+  margin: 0 auto;
+  text-indent: 50px;
+}
+
+.nav__item {
+  @include flex-just-align(flex, center, space-around);
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: #087df9;
+  }
+}
+
+.nav__item a {
+  color: #212121;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  &:hover::after {
+    position: absolute;
+    left: 43px;
+    display: block;
+    content: "";
+    width: 64%;
+    height: 4px;
+    background-color: #2196f3;
+    border-radius: 2px;
+    bottom: -34px;
+  }
+}
+
+.navigation--right {
+  @include flex-just-align(flex, center, space-around);
+  gap: 10px;
+}
+
+.nav__list,
+.navigation--right {
+  display: none;
+}
+
+.address__right-email {
+  text-decoration: none;
+  color: rgb(117, 117, 117);
+  fill: rgb(117, 117, 117);
+  &:hover {
+    color: #087df9;
+    fill: #087df9;
+  }
+}
+
+.mel {
+  width: 15px;
+  height: 15px;
+  &:hover {
+    fill: #087df9;
+    color: #087df9;
+  }
+}
+
+.address__right-number {
+  text-decoration: none;
+  color: rgb(117, 117, 117);
+  fill: rgb(117, 117, 117);
+  &:hover {
+    color: #087df9;
+    fill: #087df9;
+  }
+}
+
+.tep {
+  width: 17px;
+  height: 15px;
+  &:hover {
+    fill: #087df9;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav__list {
+    display: flex;
+  }
+  .nav__item a:hover::after {
+    bottom: -46px;
+  }
+  .navigation--right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__nav {
+    gap: 70px;
+  }
+  .nav {
+    gap: 40px;
+  }
+  .nav__list {
+    text-indent: 50px;
+  }
+  .nav__item a:hover::after {
+    bottom: -33px;
+  }
+  .navigation--right {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}

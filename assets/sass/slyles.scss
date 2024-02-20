@@ -1,0 +1,77 @@
+@import "./components/header";
+@import "./components/main";
+@import "./components/main-modal";
+@import "./components/details";
+@import "./components/profession";
+@import "./components/team";
+@import "./components/сustomers";
+@import "./components/footer";
+
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+$color: #087df9;
+
+.container {
+  width: 450px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+  .details__text {
+    width: 306px;
+  }
+  .photo {
+    width: 354px;
+    height: 374px;
+  }
+  .footer__content {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
+  .details__content {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .details__text {
+    width: 231px;
+  }
+  .profession {
+    display: flex;
+  }
+  .team__content {
+    flex-wrap: nowrap;
+  }
+  .photo {
+    width: 270px;
+    height: 260px;
+  }
+  .footer__content {
+    @include flex-just-align(flex, center, center);
+    background: #2f303a;
+    gap: 67px;
+  }
+  .footer__subscription-content {
+    @include flex-just-align(flex, center, center);
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footer__info,
+  .footer__social,
+  .footer__subscription,
+  .footer__subscription-content {
+    display: flex;
+    align-items: flex-start;
+  }
+}

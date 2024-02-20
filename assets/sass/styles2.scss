@@ -1,0 +1,55 @@
+@import "./components/header";
+@import "./components/main2";
+@import "./components/footer";
+// @import "./utils/mixins";
+// @import "./utils/placeholders";
+
+.container {
+  width: 450px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+  .nav__item a:hover::after {
+    bottom: -55px;
+  }
+  .main__buttons {
+    justify-content: center;
+  }
+  .main-web {
+    justify-content: flex-start;
+  }
+  .footer__content {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
+  .nav__item a:hover::after {
+    bottom: -42px;
+  }
+  .footer__content {
+    @include flex-just-align(flex, center, center);
+    background: #2f303a;
+    gap: 67px;
+  }
+  .footer__subscription-content {
+    @include flex-just-align(flex, center, center);
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footer__info,
+  .footer__social,
+  .footer__subscription,
+  .footer__subscription-content {
+    display: flex;
+    align-items: flex-start;
+  }
+}
